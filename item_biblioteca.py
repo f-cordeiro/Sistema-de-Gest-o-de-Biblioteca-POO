@@ -34,3 +34,21 @@ class ItemBiblioteca:
     @property
     def disponivel(self):
         return self.__disponivel
+
+    def emprestar(self):
+        if self.__disponivel:
+            self.__disponivel = False
+            return True
+        return False
+
+    def devolver(self):
+        self.__disponivel = True
+
+    def status_item(self):
+        if self.__disponivel:
+            return "✅ DISPONÍVEL"
+        else:
+            return "❌ EMPRESTADO"
+
+    def exibir_detalhes(self):
+        return f"Item: {self.__titulo} (Ano: {self.__ano})"
