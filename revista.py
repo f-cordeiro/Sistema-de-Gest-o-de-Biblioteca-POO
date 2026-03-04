@@ -21,3 +21,6 @@ class Revista(ItemBiblioteca):
     @mes.setter
     def mes(self, valor):
         self.__mes = valor
+
+    def exibir_detalhes(self):
+        return f"📰 Revista: {self.titulo} | Edição: {self.__edicao} | Mês: {self.__mes}"
