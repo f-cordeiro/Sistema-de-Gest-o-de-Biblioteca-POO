@@ -27,3 +27,6 @@ class Livro(ItemBiblioteca):
             self.__num_paginas = valor
         else:
             print("Erro: Número de páginas deve ser maior que 0.")
+
+    def exibir_detalhes(self):
+        return f"📚 Livro: {self.titulo} | Autor: {self.__autor} | Páginas: {self.__num_paginas}"
